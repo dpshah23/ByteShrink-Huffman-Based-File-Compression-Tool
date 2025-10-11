@@ -25,34 +25,32 @@ It applies a frequency-based variable-length encoding technique to achieve signi
 
 ---
 
-ByteShrink/
-├── src/
-│   ├── main.cpp
-│   ├── HuffmanNode.cpp
-│   ├── HuffmanCompressor.cpp
-│   ├── HuffmanDecompressor.cpp
-│   ├── FrequencyTable.cpp
-│   └── BitStream.cpp
-│
-├── include/
-│   ├── HuffmanNode.h
-│   ├── HuffmanCompressor.h
-│   ├── HuffmanDecompressor.h
-│   ├── FrequencyTable.h
-│   └── BitStream.h
-│
-├── data/
-│   ├── input/
-│   └── output/
-│
-├── docs/
-│   ├── architecture.png
-│   └── demo.gif
-│
-├── CMakeLists.txt
-├── .gitignore
-├── README.md
-└── LICENSE
+## 🏗️ Project Architecture
+
+- ByteShrink/
+  - src/
+    - main.cpp
+    - HuffmanNode.cpp
+    - HuffmanCompressor.cpp
+    - HuffmanDecompressor.cpp
+    - FrequencyTable.cpp
+    - BitStream.cpp
+  - include/
+    - HuffmanNode.h
+    - HuffmanCompressor.h
+    - HuffmanDecompressor.h
+    - FrequencyTable.h
+    - BitStream.h
+  - data/
+    - input/
+    - output/
+  - docs/
+    - architecture.png
+    - demo.gif
+  - CMakeLists.txt
+  - .gitignore
+  - README.md
+  - LICENSE
 
 ---
 
