@@ -25,8 +25,6 @@ It applies a frequency-based variable-length encoding technique to achieve signi
 
 ---
 
-## 🏗️ Project Architecture
-
 ByteShrink/
 ├── src/
 │   ├── main.cpp
