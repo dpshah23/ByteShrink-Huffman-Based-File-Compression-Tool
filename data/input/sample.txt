@@ -1,0 +1,25 @@
+Huffman coding is a lossless data compression algorithm. The idea is to assign variable-length codes to input characters, lengths of the assigned codes are based on the frequencies of corresponding characters.
+
+The most frequent character gets the smallest code and the least frequent character gets the largest code. This compression technique is widely used in file compression utilities and network protocols.
+
+Example text with repeated patterns:
+AAAAAAAAAA
+BBBBBB
+CCCC
+DD
+E
+
+This sample demonstrates how Huffman encoding can effectively compress data by using shorter codes for more frequent characters. The compression ratio improves significantly when the input contains characters with highly varying frequencies.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+Additional test data:
+1111111111
+2222222
+333333
+44444
+555
+66
+7
+
+The ByteShrink tool uses Huffman trees to build an optimal prefix-free code for compression and decompression operations.
