@@ -1,14 +1,23 @@
 #include "HuffmanTree.h"
+#include <queue>
 
 struct Compare {
     bool operator()(HuffmanNode* a, HuffmanNode* b) {
-        return a->freq > b->freq;
+        if (a->freq != b->freq) {
+            return a->freq > b->freq;
+        }
+        // When frequencies are equal, use character value for deterministic ordering
+        return a->data > b->data;
     }
 };
 
 HuffmanTree::HuffmanTree() : root(nullptr) {}
 
-void HuffmanTree::build(const std::unordered_map<unsigned char, int>& freq) {
+HuffmanTree::~HuffmanTree() {
+    cleanup();
+}
+
+void HuffmanTree::build(const std::map<unsigned char, int>& freq) {
     std::priority_queue<HuffmanNode*, std::vector<HuffmanNode*>, Compare> pq;
 
     for (auto& p : freq)
@@ -38,6 +47,28 @@ void HuffmanTree::generateCodes(HuffmanNode* node, const std::string& code) {
     generateCodes(node->right, code + "1");
 }
 
-std::unordered_map<unsigned char, std::string> HuffmanTree::getCodes() const {
+std::map<unsigned char, std::string> HuffmanTree::getCodes() const {
     return codes;
+}
+
+HuffmanNode* HuffmanTree::getRoot() const {
+    return root;
+}
+
+void HuffmanTree::cleanup() {
+    if (root) {
+        std::queue<HuffmanNode*> q;
+        q.push(root);
+        
+        while (!q.empty()) {
+            HuffmanNode* node = q.front();
+            q.pop();
+            
+            if (node->left) q.push(node->left);
+            if (node->right) q.push(node->right);
+            
+            delete node;
+        }
+        root = nullptr;
+    }
 }
