@@ -2,6 +2,8 @@
 #include "HuffmanDecompressor.h"
 #include <iostream>
 #include <string>
+#include <algorithm>
+#include <cctype>
 
 int main() {
     std::string command;
@@ -35,15 +37,25 @@ int main() {
         }
         
         std::string inputFile, outputFile;
+
+        // helper: trim leading/trailing whitespace from user input
+        auto trim = [](std::string &s) {
+            // left trim
+            s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](unsigned char ch) { return !std::isspace(ch); }));
+            // right trim
+            s.erase(std::find_if(s.rbegin(), s.rend(), [](unsigned char ch) { return !std::isspace(ch); }).base(), s.end());
+        };
         
         switch (choice) {
             case 1: {
                 std::cout << "Enter input file path: ";
                 std::cout.flush();
                 std::getline(std::cin, inputFile);
+                trim(inputFile);
                 std::cout << "Enter output file path (.bshk): ";
                 std::cout.flush();
                 std::getline(std::cin, outputFile);
+                trim(outputFile);
                 
                 try {
                     compressor.compress(inputFile, outputFile);
@@ -59,9 +71,11 @@ int main() {
                 std::cout << "Enter input file path (.bshk): ";
                 std::cout.flush();
                 std::getline(std::cin, inputFile);
+                trim(inputFile);
                 std::cout << "Enter output file path (.txt): ";
                 std::cout.flush();
                 std::getline(std::cin, outputFile);
+                trim(outputFile);
                 
                 try {
                     decompressor.decompress(inputFile, outputFile);
