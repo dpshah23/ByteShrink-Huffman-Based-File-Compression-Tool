@@ -16,7 +16,7 @@ Makefile
 *.cmake
 
 
-*.exe
+
 *.out
 *.a
 *.lib
