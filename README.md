@@ -121,11 +121,11 @@ To decompress:
 
 ## 🧭 Future Enhancements
 
- 🔹 Adaptive Huffman Coding
- 🔹 Multi-threaded Compression
- 🔹 Progress Visualization in CLI
- 🔹 GUI Front-end (Qt / Electron)
- 🔹 File Format Detection for Smart Encoding
+ 🔹 Adaptive Huffman Coding  
+ 🔹 Multi-threaded Compression  
+ 🔹 Progress Visualization in CLI  
+ 🔹 GUI Front-end (Qt / Electron)  
+ 🔹 File Format Detection for Smart Encoding  
 
 ---
 
