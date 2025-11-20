@@ -138,7 +138,7 @@ To decompress:
 
 ## 📸 Demo Preview
 
-*(Add GIF or screenshots inside `/docs/demo.gif` and `/docs/architecture.png`)*
+<img width="929" height="989" alt="image" src="https://github.com/user-attachments/assets/5094b7db-cd69-471a-8e5f-17eced7126f3" />
 
 ---
 
