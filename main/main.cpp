@@ -7,6 +7,7 @@
 #include <filesystem>
 #include <iomanip>
 
+
 int main() {
     std::string command;
     HuffmanCompressor compressor;

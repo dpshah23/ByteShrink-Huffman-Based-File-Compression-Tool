@@ -110,6 +110,34 @@ To decompress:
 
 ---
 
+## 🖼️ Qt GUI (Drag & Drop)
+
+The project now ships with a Qt Widgets front-end that supports drag-and-drop file selection and live progress bars for both compression and decompression.
+
+### Prerequisites
+- Qt 5.15+ or Qt 6.x with the **Widgets** and **Concurrent** modules
+- CMake 3.16+ and a C++17 toolchain (MinGW, MSVC, or clang)
+
+### Build the GUI
+```bash
+mkdir build && cd build
+cmake .. -G "Ninja"  # or "MinGW Makefiles" / "Visual Studio" generator
+cmake --build . --target byteshrink_gui
+```
+
+### Run the GUI
+```bash
+./bin/byteshrink_gui   # Windows: .\bin\byteshrink_gui.exe
+```
+
+### How it works
+- Drag any file onto the drop area or click **Browse**.
+- **Compress** saves a `.bshk` file alongside the source (same folder, same base name).
+- **Decompress** targets `.bshk` files and writes `<name>_decoded.txt` in the same folder.
+- Two progress bars update continuously based on the core Huffman operations.
+
+---
+
 ## 🧩 Sample Output
 
 | Input File   | Input Size | Compressed File | Compressed Size | Reduction |

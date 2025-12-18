@@ -1,0 +1,9 @@
+This is a test file for ByteShrink compression.
+ByteShrink uses Huffman Coding to efficiently compress files.
+It reduces file size by assigning shorter bit sequences to more frequent characters.
+This is a test file for ByteShrink compression.
+ByteShrink uses Huffman Coding to efficiently compress files.
+It reduces file size by assigning shorter bit sequences to more frequent characters.
+Testing the compression algorithm with repeated text patterns.
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.

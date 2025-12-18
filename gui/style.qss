@@ -1,0 +1,109 @@
+/* ByteShrink Modern UI Stylesheet */
+
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #667eea, stop:0.5 #764ba2, stop:1 #f093fb);
+}
+
+QWidget#centralWidget {
+    background: transparent;
+}
+
+QFrame#mainContainer {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+QFrame#dropZone {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 rgba(255, 255, 255, 0.9), stop:1 rgba(240, 242, 245, 0.9));
+    border: 3px dashed #cbd5e0;
+    border-radius: 20px;
+}
+
+QFrame#dropZone:hover {
+    border: 3px dashed #667eea;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 rgba(230, 240, 255, 0.95), stop:1 rgba(210, 230, 255, 0.95));
+}
+
+QFrame#fileCard {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(102, 126, 234, 0.1), stop:1 rgba(118, 75, 162, 0.1));
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 18px;
+}
+
+QPushButton#actionBtn {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #667eea, stop:1 #764ba2);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+QPushButton#actionBtn:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #5568d3, stop:1 #6941a8);
+    transform: translateY(-2px);
+}
+
+QPushButton#actionBtn:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #4a5bbf, stop:1 #5a3890);
+}
+
+QPushButton#actionBtn:disabled {
+    background: #e2e8f0;
+    color: #a0aec0;
+}
+
+QPushButton#removeBtn {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #f093fb, stop:1 #f5576c);
+    color: white;
+    border: none;
+    border-radius: 22px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+QPushButton#removeBtn:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #e07fe8, stop:1 #e34357);
+}
+
+QFrame#progressCard {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+}
+
+QProgressBar {
+    border: none;
+    border-radius: 12px;
+    background: #edf2f7;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    min-height: 40px;
+}
+
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #667eea, stop:0.5 #764ba2, stop:1 #f093fb);
+    border-radius: 12px;
+}
+
+QFrame#statusBar {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
